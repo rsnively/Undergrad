@@ -19,7 +19,6 @@ public class Board extends JPanel implements ActionListener
 	private final int HEIGHT = 400;
 	
 	private Image background;
-	private Image title;
 	private Timer timer;
 	private Player player;
 	
@@ -30,8 +29,6 @@ public class Board extends JPanel implements ActionListener
 		
 		ImageIcon ii = new ImageIcon(this.getClass().getResource("background.png"));
 		background = ii.getImage();
-		ii = new ImageIcon(this.getClass().getResource("title.png"));
-		title = ii.getImage();
 		
 		player = new Player();
 		
@@ -49,7 +46,6 @@ public class Board extends JPanel implements ActionListener
 	{
 		super.paint(g);
 		
-		//g.drawImage(title,100,0,this);
 		g.drawImage(background,100,25,this);
 		g.drawImage(player.getImage(),player.getX(),player.getY(),this);
 		
